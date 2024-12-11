@@ -1,0 +1,161 @@
+/* Conteneur principal */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .signup-box {
+    background: #ffffff;
+    padding-top: 28px;
+    padding: 2rem 2rem;
+    border: 1px solid gray;
+    border-bottom: 3px solid #145a32;
+    border-top: 3px solid #145a32;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  
+    .logo img {
+      width: 100px;
+      margin-bottom: 1.5rem;
+    }
+  
+    h2 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+  
+      .textbox {
+        flex: 1;
+        margin-right: 10px;
+        text-align: left;
+  
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+          color: #555;
+          font-size: 16px;
+        }
+  
+        input, select {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 14px;
+          box-sizing: border-box;
+        }
+  
+        select {
+          height: 40px;
+        }
+      }
+  
+      .textbox:last-child {
+        margin-right: 0;
+      }
+    }
+  
+    .password-container {
+      position: relative;
+  
+      .password-toggle {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        padding-top: 16px;
+      }
+    }
+  
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #145a32;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+  
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  
+    .login-link {
+      margin-top: 18px;
+      font-size: 14px;
+      color: #777;
+  
+      a {
+        color: #0069d9;
+        text-decoration: none;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    /* Types de culture */
+    .checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .checkbox-item {
+        display: flex;
+        align-items: center;
+        padding-top: 5px;
+    }
+    
+    .checkbox-item input[type="checkbox"] {
+        margin-right: 5px;
+    }
+    
+    /* Bouton et liens */
+    .spacer {
+        margin-bottom: 20px;
+    }
+
+    .textbox {
+        flex: 1;
+        margin-right: 10px;
+        text-align: left;}
+  
+     .textbox label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+          color: #555;
+          font-size: 16px;
+    }
+
+    
+      
+  }
+  

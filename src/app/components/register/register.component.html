@@ -1,0 +1,81 @@
+<div class="signup-container">
+    <div class="signup-box">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Logo de l'application" />
+      </div>
+  
+      <h2>Créer un compte</h2>
+  
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-row">
+          <div class="textbox">
+            <label for="prenom">Prénom</label>
+            <input [(ngModel)]="prenom" type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
+          </div>
+  
+          <div class="textbox">
+            <label for="nom">Nom</label>
+            <input [(ngModel)]="nom" type="text" id="nom" name="nom" placeholder="Votre nom" required />
+          </div>
+        </div>
+  
+        <div class="form-row">
+          <div class="textbox">
+            <label for="adresse">Adresse</label>
+            <input [(ngModel)]="adresse" type="text" id="adresse" name="adresse" placeholder="Votre adresse" required />
+          </div>
+  
+          <div class="textbox">
+            <label for="telephone">Téléphone</label>
+            <input [(ngModel)]="telephone" type="tel" id="telephone" name="telephone" placeholder="Votre numéro de téléphone" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+        <div class="textbox">
+            <label for="email">Email</label>
+            <input [(ngModel)]="email" type="email" id="email" name="email" placeholder="Votre adresse email" required />
+          </div>
+        </div>
+  
+        <div class="form-row">
+          <div class="textbox password-container">
+            <label for="password">Mot de passe</label>
+            <input [(ngModel)]="password" [type]="showPassword ? 'text' : 'password'" id="password" placeholder="Mot de passe" name="password" required />
+            <button type="button" class="password-toggle" (click)="togglePasswordVisibility()">👁️</button>
+          </div>
+
+          <div class="textbox password-container">
+            <label for="confirmPassword">Confirmer le mot de passe</label>
+            <input [(ngModel)]="confirmPassword" [type]="showConfirmPassword ? 'text' : 'password'" id="confirmPassword" placeholder="Confirmez le mot de passe" name="confirmPassword" required />
+            <button type="button" class="password-toggle" (click)="toggleConfirmPasswordVisibility()">👁️</button>
+          </div>
+        </div>
+          
+  
+        <div class="textbox">
+          <label>Choisissez le(s) type(s) de culture pratiqué(s)</label>
+          <div class="checkbox-group">
+            <div *ngFor="let type of typesCultures" class="checkbox-item">
+              <input
+                type="checkbox"
+                [value]="type.id"
+                (change)="onTypeCultureChange($event)"
+                id="type-{{ type.id }}"
+              />
+              <label for="type-{{ type.id }}">{{ type.libelle }}</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="spacer"></div>
+  
+        <input type="submit" value="S'inscrire" class="btn" />
+      </form>
+  
+      <p class="login-link">
+        Vous avez déjà un compte ? <a routerLink="/login">Se connecter</a>
+      </p>
+    </div>
+  </div>
+  

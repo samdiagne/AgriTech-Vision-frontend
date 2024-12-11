@@ -1,0 +1,125 @@
+.navbar {
+    position: fixed; // Fixe la barre en haut de la fenêtre
+    top: 0; // Place la barre au tout début de la page
+    left: 0; // Aligne la barre avec le bord gauche
+    width: 100%; // Étend la barre sur toute la largeur de la fenêtre
+    height: 70px; // Hauteur ajustée
+    background-color: #145a32; // Couleur verte sombre
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; // S'assure que la barre reste au-dessus des autres éléments
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Ajoute un léger effet d'ombre
+  
+    .logo {
+      display: flex;
+      align-items: center;
+  
+      .logo-img {
+        height: 60px;
+        margin-right: 10px;
+      }
+  
+      a {
+        font-size: 20px;
+        font-weight: 700;
+        color: #f4f6f7; // Couleur claire
+        margin-left: 5px;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  
+    &.show {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: #145a32;
+    }
+  
+    .menu-links {
+      display: flex;
+      gap: 16px;
+      border-right: 1px solid #a9dfbf;
+      padding-inline: 16px;
+  
+      a {
+        font-weight: 500;
+        color: #d5f5e3; // Vert clair pour les liens
+        padding: 6px 12px;
+  
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  
+    .log-in {
+      font-weight: 500;
+      padding: 8px 16px;
+      background-color: transparent;
+      color: #d5f5e3;
+      border-radius: 8px;
+      border: 2px solid #27ae60; // Bordure verte
+      transition: 0.2s;
+  
+      &:hover {
+        background-color: #27ae60;
+        color: white;
+      }
+    }
+  }
+  
+  .dropdown {
+    position: relative;
+  
+    &:hover .dropdown-menu {
+      display: block;
+    }
+  
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #145a32;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+  
+      a {
+        color: #d5f5e3;
+        padding: 8px 12px;
+        display: block;
+  
+        &:hover {
+          background-color: #27ae60;
+          color: white;
+        }
+      }
+    }
+  }
+  
+  .menu-btn {
+    font-size: 28px;
+    color: white;
+    display: none;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 53rem) {
+    .menu {
+      display: none;
+    }
+  
+    .menu-btn {
+      display: block;
+    }
+  }
+  
